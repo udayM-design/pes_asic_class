@@ -7,6 +7,6 @@ Day 1 Assignment
 
 #compile using riscv compieler and view the output
 
-![Uploading image.png…]()
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/c8dcc0b5-bed6-4eac-9760-e93bbbaf7eac)
 
 
