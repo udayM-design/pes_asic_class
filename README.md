@@ -25,4 +25,13 @@
 ## 2.create a C program that shows the maximum and minimum values of 64bit unsigend and signed numbers
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/270c60de-78c6-478e-8282-e7d284f7a225)
 
+## Day 2 
+#### Representation formats of load, add, store etc instructions  
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/08e92535-a42d-488f-9df8-d5f901eee2d3)
+
+### Simulating new C program with function call 
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/f69f4e52-c5fb-4388-9866-4d84ed79c36d)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/9d48b598-ca70-4c77-b94c-d5f0b2732eb0)
+
+
 
