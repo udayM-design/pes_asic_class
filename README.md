@@ -3,6 +3,11 @@
 
 ### 1. Create a simple C program That calculates sum from 1 to N -> Sum of numbers from 1 to n
 
+```
+gcc 1ton.c -o 1ton.o
+./1ton.o
+
+```
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/99980318-cea2-436a-8b82-da5ee495e35b)
 
 
@@ -33,5 +38,10 @@
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/f69f4e52-c5fb-4388-9866-4d84ed79c36d)
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/9d48b598-ca70-4c77-b94c-d5f0b2732eb0)
 
-
+### To run C-program on RISC-V CPU
+```
+chmod 777 rv32im.sh
+./rv32im.sh
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/7c83c041-a5fa-4377-b578-8b460208ccd9)
 
