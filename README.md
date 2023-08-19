@@ -13,3 +13,6 @@ Day 1 Assignment
 
 
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/455902cf-c3ad-4182-a627-044eafe9aed1)
+
+#contents of main when used -Ofast optimizer
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/a2b161d8-40a2-4953-b88d-140c525ba2a2)
