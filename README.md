@@ -9,4 +9,7 @@ Day 1 Assignment
 
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/c8dcc0b5-bed6-4eac-9760-e93bbbaf7eac)
 
+#Contents of main when used -O1 optimizer
 
+
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/455902cf-c3ad-4182-a627-044eafe9aed1)
