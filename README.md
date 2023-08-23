@@ -1,4 +1,9 @@
 # pes_asic_class
+<details>
+<summary>DAY 1</summary>
+<br>
+	
+[](https://github.com/udayM-design/pes_asic_class#links-for-easy-navigaton)
 ## Day 1 Assignment
 
 ### 1. Create a simple C program That calculates sum from 1 to N -> Sum of numbers from 1 to n
@@ -30,6 +35,14 @@ gcc 1ton.c -o 1ton.o
 ## 2.create a C program that shows the maximum and minimum values of 64bit unsigend and signed numbers
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/270c60de-78c6-478e-8282-e7d284f7a225)
 
+</details>
+
+
+<details>
+<summary>DAY 2</summary>
+<br>
+	
+[](https://github.com/udayM-design/pes_asic_class#links-for-easy-navigaton)
 ## Day 2 
 #### Representation formats of load, add, store etc instructions  
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/08e92535-a42d-488f-9df8-d5f901eee2d3)
@@ -45,3 +58,5 @@ chmod 777 rv32im.sh
 ```
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/7c83c041-a5fa-4377-b578-8b460208ccd9)
 
+
+</details>
