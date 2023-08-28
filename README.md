@@ -152,6 +152,13 @@ flatten
 show
 ```
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/cb2a4bcd-2f31-4786-b78f-0dc15501aaed)
+```
+write_verilog -noattr multiple_modules_flat.v
+!gvim multiple_modules_flat.v
+```
+
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/1f57401d-e671-4d8b-bb45-341476f09209)
+
 
 </details>
 </details>
