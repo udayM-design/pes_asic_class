@@ -60,3 +60,47 @@ chmod 777 rv32im.sh
 
 
 </details>
+<details>
+<summary>RTL Design Using Verilog With SKY130 Technology</summary>
+<br>
+	
+[](https://github.com/udayM-design/pes_asic_class#links-for-easy-navigaton)
+#### DAY 1
+<details>
+<summary>Labs on Yosys introduction</summary>
+<br>
+	
+[](https://github.com/udayM-design/pes_asic_class#links-for-easy-navigaton)
+ Invoking yosys
+ ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/9051e4fc-4438-4a67-a32d-3d98d945af3f)
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog good_mux.v
+synth -top good_mux.v
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/a95f917f-f3c5-423b-b08f-97900ee085da)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/1c4b517a-ce68-4691-8709-c92c199aa1fb)
+```
+To synthesis the mosule:synth -top good_mux
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/5e352ecb-eade-4b78-a448-7818f80993b2)
+
+```
+To generate the netlist:abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/916136e4-38c3-4257-82d5-f34b977bf99c)
+```
+To see the logic it has realised : show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/fefa9063-3365-4f5f-abe6-2718d0604865)
+
+</details>
+</details>
+<details>
+<summary>Timing libs, hierarchical vs flat synthesis and efficient flop coding styles</summary>
+<br>
+	
+[](https://github.com/udayM-design/pes_asic_class#links-for-easy-navigaton)
