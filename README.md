@@ -104,3 +104,56 @@ To see the logic it has realised : show
 <br>
 	
 [](https://github.com/udayM-design/pes_asic_class#links-for-easy-navigaton)
+### Introduction to timing.libs (Lab4)
+```
+gvim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/eafd0075-282a-458f-a0a8-9c993f7cc8fa)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/cbd8c9d3-e0b0-4c08-8cde-4a815e4a9210)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/8a25284b-2d79-4b1b-9833-b5aab0d9660c)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/0a496974-d449-4dad-8b88-c704dac01542)
+
+### Hierarchical vs Flat synthesis
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+gvim multiple_modules.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/f43e2444-9fc9-4ddd-a083-af51cb1cf2c6)
+
+```
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/d7c27269-274f-4b20-9e1f-3f5cdaf69bc6)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/b3c60312-1f00-4c1b-bb7d-ccd4e0bf6569)
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show multiple_modules
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/11648dce-1050-4e91-b440-a0217bcd4260)
+
+```
+write_verilog -noattr multiple_modules_hier.v
+!gvim multiple_modules_hier.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/f4efe289-e114-44af-be14-73c4bc83ce96)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/c47f6c2a-b749-4700-9a9a-2866e216d64d)
+
+### Flat Synthesis
+```
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top multiple_modules
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+flatten
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/cb2a4bcd-2f31-4786-b78f-0dc15501aaed)
+
+</details>
+</details>
+
+
