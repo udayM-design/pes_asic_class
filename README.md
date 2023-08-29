@@ -253,7 +253,19 @@ write_verilog -noattr mul2_netlist.v
 ```
 
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/d38f6a34-d197-44db-a38c-04384e7d299b)
-
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_8.v
+synth -top mult8
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/b47761c1-ddbe-4549-8692-e230cbd7e287)
+```
+write_verilog -noattr mul8_netlist.v
+!gvim mult8_netlist.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/013372e4-786d-46f8-adb4-a0cfe6030a52)
 
 </details>
 </details>
