@@ -362,6 +362,7 @@ show multiple_module_opt
 <details>
 <summary>Sequential logic optimizations  </summary>
 <br>
+	
 ## dff_const1
 	
 ```
@@ -500,5 +501,18 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/8eb20553-b408-4016-be9f-8d7a1ca1a8d3)
+</details>
+
+<details>
+<summary>GLS and Synthesis-Simulation Mismatch</summary>
+<br>
+
+```
+gvim ternary_operator_mux.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/e4fce731-4798-48c8-8a25-684a075f10e3)
+
+
+ 
 
 
