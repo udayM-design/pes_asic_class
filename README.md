@@ -159,6 +159,101 @@ write_verilog -noattr multiple_modules_flat.v
 
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/1f57401d-e671-4d8b-bb45-341476f09209)
 
+### Various Flop Coding Styles and optimization
+## D Flip-Flop with Asynchronous and synchronous Reset
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+gvim dff_asyncres_syncres.v
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/bec343fd-98c6-458d-a997-7c77d6faf7fd)
+```
+cd vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+gvim dff_asyncres_syncres.v
+iverilog dff_asyncres.v tb_dff_asyncres.v
+./a.out
+ gtkwave tb_dff_asyncres.vcd
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/ea3432ff-9c9d-4f03-a44a-14120d8c901b)
+
+
+```
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v
+synth -top dff_asyncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/281b51e8-28a4-48f3-a5f4-2401b6602e48)
+
+## D Flip_Flop with Asynchronous Set
+```
+gvim dff_async_set.v
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/f2b37b03-435f-4ecd-84ca-a1d5fd6587cd)
+
+```
+iverilog dff_async_set.v tb_dff_async_set.v
+./a.out
+gtkwave tb_dff_async_set.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/47a0cc36-4596-4e2c-bc16-6bf56984c160)
+```
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_async_set.v
+synth -top dff_async_set
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/8d6e4f22-ff51-4072-b1c2-16db50286ff2)
+## D Flip-Flop with Synchronous Reset
+```
+gvim dff_syncres.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/18a0319f-25c3-4552-8fcb-d64dbe6e60d0)
+```
+iverilog dff_syncres.v tb_dff_syncres.v
+./a.out
+gtkwave tb_dff_syncres.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/a3c9165f-d9f9-458b-a7a3-9c315e310563)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_syncres.v
+synth -top dff_syncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/1cc6646c-b74b-4c55-8b97-eaf4114365f7)
+
+### Interesting Optimisations
+```
+gvim mult_2.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/a6798221-9770-4e8e-ae74-57aeffe585c8)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_2.v
+synth -top mul2
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/aca9dd2d-d058-43b5-84e9-db28f958b049)
+```
+write_verilog -noattr mul2_netlist.v
+!gvim mul2_netlist.v
+```
+
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/d38f6a34-d197-44db-a38c-04384e7d299b)
+
 
 </details>
 </details>
