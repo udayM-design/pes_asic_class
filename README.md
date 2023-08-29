@@ -343,5 +343,162 @@ show
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/4840d6c1-ef01-4d54-a847-60e92a71032a)
 
 # multiple_module_opt
+```
+gvim multiple_module_opt.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/20fb3e69-8c38-4a8e-b8dd-ba5153cd5949)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_module_opt.v
+synth -top multiple_module_opt
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show multiple_module_opt 
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/720dc757-5e7e-4374-af79-78d9031e384d)
+
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/8488efc9-098b-4ea4-98da-d69af10d27a1)
+</details>
+<details>
+<summary>Sequential logic optimizations  </summary>
+<br>
+## dff_const1
+	
+```
+gvim dff_const1.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/aec720b9-e882-4f9b-9ba6-96c99721ff80)
+```
+iverilog dff_const1.v tb_dff_const1.v
+./a.out
+gtkwave tb_dff_const1.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/2ae96207-1b85-42f3-95fc-1094efc40a81)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const1.v
+synth -top dff_const1
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show	
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/5bdfd196-61fa-4ece-ba25-84b4ba49c39d)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/5fb09f65-d463-4f5c-a8a0-898b4a267568)
+## dff_const2
+```
+gvim dff_const2.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/1166da29-5e0a-49b5-9191-e2f162a5978e)
+```
+iverilog dff_const2.v tb_dff_const2.v
+gtkwave tb_dff_const2.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/af28e28d-e4dc-4a5e-b3a8-c7d9d803773b)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const2.v
+synth -top dff_const2
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/ad321a9f-c509-42f3-b888-abbcded16cfc)
+## dff_const3
+```
+gvim dff_const3.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/c1421365-dd6f-4c8c-b205-00d42e187786)
+```
+iverilog dff_const3.v tb_dff_const3.v
+./a.out
+gtkwave tb_dff_const3.vcd	
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/e1284304-76a1-41fe-9ebd-4ae6aa3aefd0)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const3.v
+synth -top dff_const3
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/fe070edf-af85-4584-8d0a-76e31e8ca279)
+## dff_const4
+```
+gvim dff_const4.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/05c3dd64-caf1-4360-baa4-99f6bf56ab24)
+```
+iverilog dff_const4.v tb_dff_const4.v
+./a.out
+gtkwave tb_dff_const4.vcd	
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/9434ea9d-3d7d-4636-aaad-1e9ac4df93d1)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const4.v
+synth -top dff_const4
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/8f0083d8-5a77-4c3f-b919-41d0bb5cfe89)
+## dff_const5
+```
+gvim dff_const5.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/b066f208-4159-4887-9db5-ec9aae832bef)
+```
+iverilog dff_const5.v tb_dff_const5.v
+./a.out
+gtkwave tb_dff_const5.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/523ee2ef-2732-43f6-84ce-2ab4d5f4e826)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const5.v
+synth -top dff_const5
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/dc617d6a-e350-420c-bf6d-3b6457337536)
+</details>
+
+<details>
+<summary> Sequential optimizations for unused outputs </summary>
+<br>
+	
+### counter_opt
+	
+```
+gvim counter_opt.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/95212602-e4b1-4d74-8465-af2dfc9ab5f7)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/fcfee8d7-306b-4a9d-ad59-56f9d479fe11)
+
+### counter_opt2
+```
+gvim counter_opt2.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/b3ca3044-3e33-4185-be07-e8966d293c04)
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt2.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/8eb20553-b408-4016-be9f-8d7a1ca1a8d3)
 
 
