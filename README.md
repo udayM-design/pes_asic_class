@@ -270,4 +270,78 @@ write_verilog -noattr mul8_netlist.v
 </details>
 </details>
 
+<details>
+<summary>Combinational logic optimizations </summary>
+<br>
+	
+[](https://github.com/udayM-design/pes_asic_class#links-for-easy-navigaton)
+```
+gvim opt_check.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/86a4d3a0-2cad-45bc-b847-45cf76fde595)
+# opt_check
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check.v
+synth -top opt_check
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/385cb096-ce0b-4cc8-8b37-d23d9918591b)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/209156fb-327d-42b9-a03b-9b76835749ec)
+
+# opt_check2
+```
+gvim opt_check.v
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/66994bd9-f6d2-49f7-966e-f091d250d360)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check2.v
+synth -top opt_check2
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/2b88d7cf-fff9-4e6f-849b-5bb015dd6abf)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/5c1879a8-b774-4296-b5a3-d959fbceb827)
+# opt_check3
+```
+gvim opt_check3.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/2986621d-31b7-49f1-a4b5-2c663185a7bf)
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check3.v
+synth -top opt_check3
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/3ae1884f-c39a-47aa-9ad0-4e4cb8bcdf88)
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/eb922f93-ce14-4c99-a43d-85788c15a6d1)
+# opt_check4
+```
+vim opt_check4.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/f57f9efc-3b66-4235-b3dd-a7c1f3b48f69)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog opt_check4.v
+synth -top opt_check4
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/b8bd4b3d-f45c-454c-aac6-00968a401f60)
+
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/4840d6c1-ef01-4d54-a847-60e92a71032a)
+
+# multiple_module_opt
+
 
