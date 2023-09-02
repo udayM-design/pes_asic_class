@@ -511,8 +511,77 @@ show
 gvim ternary_operator_mux.v
 ```
 ![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/e4fce731-4798-48c8-8a25-684a075f10e3)
+```
+iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/6202a59e-bdc2-477e-a64c-cde80fcd6f7c)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog ternary_operator_mux.v
+synth -top ternary_operator_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/049a57ce-1b6b-4c20-917d-b5dfc66b4713)
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/20666aa8-23c3-48b7-871d-35c30185ee40)
+```
+gvim bad_mux.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/05e4d10c-befa-4409-ba04-376f56bc5958)
+```
+iverilog bad_mux.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/7f520af8-8f6a-45fa-8094-75320274df23)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog bad_mux.v
+synth -top bad_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/4f08ad63-7a01-49fb-be9e-fb0b79917283)
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/93eedc29-790d-4fc6-a555-7be375fd8600)
+</details>
+<details>
+<summary> synth-sim mismatch for blocking statement </summary>
+<br>
 
-
- 
-
-
+```
+gvim blocking_caveat.v
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/fd4af1a1-3f19-472f-8d6f-3c1925bd12c5)
+```
+iverilog blocking_caveat.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/9c2bd5d2-7a09-40be-b69d-da074d87b32a)
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog blocking_caveat.v
+synth -top blocking_caveat
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/225ac30b-00f6-41b6-a216-ae195115c3cf)
+### GLS to Gate-Level Simulation
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+![image](https://github.com/udayM-design/pes_asic_class/assets/93391726/ef30e72d-da73-4626-a705-47d5401f8d10)
